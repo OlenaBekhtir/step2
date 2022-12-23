@@ -1,0 +1,191 @@
+@import "variables";
+@import "mixins";
+
+.section1-people-talk {
+    width: 320px;
+    background-image: url(../img/bg_img/section1_mobile.png);
+    @include background-position();
+    @media (min-width: 320px) {
+        width: 100%;
+    }
+    @media (min-width: 481px) {
+        width: 100%;
+        background-image: url(../img/bg_img/section1_tablet.png);
+        @include background-position();
+    }
+    @media (min-width: 993px) {
+        width: 100%;
+        background-image: url(../img/bg_img/section1_desktop.png);
+        @include background-position();
+        padding-bottom: 15px;
+        margin-bottom: -15px;
+    }
+    @media (min-width: 1200px) {
+        width: 1200px;
+    }
+    &__title {
+        @include text($text-color, 36px, 700, 48px);
+        text-align: center;
+        padding-top: 57px;
+        margin-bottom: 8px;
+        @media (min-width: 481px) {
+            font-size: 28px;
+        }
+        @media (min-width: 620px) {
+            font-size: 36px;
+            padding-top: 86px;
+        }
+        @media (min-width: 728px) {
+            @include text($text-color, 42px, 700, 44px);
+        }
+        @media (min-width: 993px) {
+            @include text($text-color, 48px, 700, 50px);
+            padding-top: 108px;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 45px;
+        width: 270px;
+        margin-inline: auto; 
+        @media (min-width: 481px) {
+            margin-top: 0;
+            width: 200px;            
+        }  
+        @media (min-width: 700px) {
+            margin-top: 0;
+            width: 340px;            
+        }
+        @media (min-width: 993px) {
+            margin-top: 0;
+            width: 250px;            
+        } 
+        @media (min-width: 1200px) {
+            margin-top: 0;
+            width: 340px;            
+        }     
+    }
+    &__card-text {
+        font-family: "Lato", sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-color;
+        text-align: center;
+    }
+    &__add-info {
+        width: 251px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #A291A5;
+        margin-top: 37px;
+        margin-inline: auto;
+        text-align: center;   
+        @media (min-width: 481px) {
+            width: calc(100% - 64px);
+            margin-top: 68px;
+            margin-inline: auto; 
+        }
+        @media (min-width: 993px) {
+            margin-top: 118px;
+            width: 887px;
+        }     
+    }
+}
+
+.card {
+    &__logo-1 {
+        margin-bottom: 33px;
+        @media (min-width: 481px) {
+            margin-top: 88px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 85px;
+        }
+    }
+    &__logo-2 {
+        margin-bottom: 29px;
+        @media (min-width: 481px) {
+            margin-top: 88px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 82px;
+        }
+    }
+    &__logo-3 {
+        margin-bottom: 22px;
+        @media (min-width: 481px) {
+            margin-top: 58px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 75px;
+        }
+    }
+    &__logo-4 {
+        margin-bottom: 33px;
+        @media (min-width: 481px) {
+            margin-top: 88px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 116px;
+        }
+    }
+    &__logo-5 {
+        margin-bottom: 28px;
+        @media (min-width: 481px) {
+            margin-top: 62px;
+            margin-bottom: 22px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 112px;
+        }
+    }
+    &__logo-6 {
+        margin-bottom: 24px;
+        @media (min-width: 481px) {
+            margin-top: 56px;
+            margin-bottom: 30px;
+        }
+        @media (min-width: 993px) {
+            margin-top: 111px;
+        }
+    }
+}
+
+.section1-people-talk__add-info::after {
+    content: "";
+    display: block;
+    width: 245px;
+    border-bottom: 2px solid #645766;
+    text-align: center;
+    margin-top: 22px;
+    @media (min-width: 481px) {
+        width: calc(100% - 213px);
+        margin-inline: auto;
+        margin-top: 19px;
+    }
+    @media (min-width: 993px) {
+        width: 780px;
+        margin-inline: auto;
+    }
+}
+
+.section1-people-talk__wrap {
+    @media (min-width: 481px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-inline: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    @media (min-width: 993px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-inline: auto;
+        text-align: center;
+    }
+}

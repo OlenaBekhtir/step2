@@ -1,0 +1,20 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "section_revolutionary";
+@import "section_what-you-get";
+@import "section1_people_talk";
+@import "section_pricing.scss";
+
+
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+    @include flex-center();
+    flex-direction: column;
+    @media (min-width: 1200px) {
+        width: 1200px;
+        margin-inline: auto;
+    }
+}

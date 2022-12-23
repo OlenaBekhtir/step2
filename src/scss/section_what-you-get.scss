@@ -1,0 +1,119 @@
+.what-you-get {
+  min-width: 320px;
+  @media (min-width: 993px) {
+    background-color: #f4f4f4;
+  }
+  &__wrapper {
+    //padding-right: 25px;
+    //padding-left: 26px;
+    @media (min-width: 993px) {
+      padding-top: 100px;
+      //XXX-
+      display: grid;
+      grid-template-areas:
+              "items-block title"
+              "items-block image";
+      grid-template-columns: 45% auto;
+      grid-template-rows: 58px;
+      //-XXX
+    }
+  }
+  &__title {
+    padding-right: 25px;
+    padding-left: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #8D81AC;
+    &:before {
+      content: "<";
+    }
+    &:after {
+      content: ">";
+    }
+    @media (min-width: 481px) {
+      font-size: 42px;
+    }
+    @media (min-width: 993px) {
+      grid-area: title;
+      //font-size: 42px;
+      //line-height: 50px;
+      padding: 0;
+      text-align: left;
+      margin-left: 7%;
+    }
+  }
+  &__items-block {
+    padding-right: 25px;
+    padding-left: 26px;
+    margin-bottom: 58px;
+    @media (min-width: 993px) {
+      grid-area: items-block;
+      //padding: 0;
+      margin: 0;
+    }
+  }
+  &__item {
+    margin-top: 37px;
+    text-align: center;
+    @media (min-width: 481px) {
+      margin-top: 52px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    @media (min-width: 993px) {
+      margin: 0 0 34px 0;
+    }
+  }
+  &__image {
+    overflow: hidden;
+    max-width: 700px;
+    margin-left: auto;
+    width: 95%;
+    img {
+      width: 100%;
+    }
+    @media (min-width: 993px) {
+      grid-area: image;
+    }
+  }
+}
+
+.item__text {
+  margin-top: 27px;
+  @media (min-width: 481px) {
+    margin-top: 0;
+    width: 77%;
+  }
+  &-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #323232;
+    @media (min-width: 481px) {
+      text-align: start;
+    }
+    @media (min-width: 993px) {
+      line-height: 21px;
+    }
+  }
+  p {
+    margin-top: 14px;
+    font-family: "Lato",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #848E97;
+    @media (min-width: 481px) {
+      text-align: start;
+    }
+  }
+}

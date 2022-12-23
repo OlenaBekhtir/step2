@@ -1,0 +1,112 @@
+//@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+//@import "variables";
+@import "mixins";
+
+.revolutionary {
+  min-width: 320px;
+  padding-bottom: 120px;
+  @media (min-width: 481px) {
+    padding-bottom: 160px;
+  }
+  @media (min-width: 993px) {
+    padding-bottom: 70px;
+  }
+  &__wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #635C73;
+    @media (min-width: 481px) {
+      font-size: 42px;
+      line-height: 42px;
+    }
+    @media (min-width: 993px) {
+      font-size: 54px;
+      line-height: 54px;
+    }
+  }
+  &__text {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #323232;
+    margin-top: 27px;
+    @media (min-width: 481px) {
+      font-size: 21px;
+      line-height: 32px;
+    }
+    @media (min-width: 993px) {
+      margin-top: 35px;
+      max-width: 861px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.revolutionary__info {
+  margin-top: 36px;
+  //display: flex;
+  //flex-wrap: wrap;
+  //justify-content: center;
+  @include flex-center;
+  flex-wrap: wrap;
+  @media (min-width: 993px) {
+    margin-top: 10px;
+  }
+}
+
+.info__item {
+  display: flex;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  margin: 20px 10px 0 0;
+}
+
+.info__icons {
+  font-family: "Lato", sans-serif;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: bold;
+  color: #323232;
+  border-right: 1px solid #d5d5d5;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: linear-gradient(#fcfcfc, #ececed);
+  padding: 7px 10px;
+  &:before {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+    font-weight: 900;
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+  }
+  &_eye:before {
+    content: "\f06e";
+  }
+  &_star:before {
+    content: "\f005";
+  }
+  &_fork:before {
+    content: "\f126";
+  }
+}
+
+.info__counter {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #323232;
+  padding: 7px 10px;
+}

@@ -1,0 +1,27 @@
+@mixin text ($color-text, $font-size-text, $font-weight-text, $line-height-text) {
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: $color-text;
+    font-size: $font-size-text;
+    font-weight: $font-weight-text;
+    line-height: $line-height-text;
+}
+
+@mixin flex-center () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center_space-between () {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin background-position () {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
